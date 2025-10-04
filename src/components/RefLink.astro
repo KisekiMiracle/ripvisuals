@@ -1,0 +1,9 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const { ref, isContact } = Astro.props;
+---
+
+<a href={ref} class=`hover:cursor-pointer flex justify-center items-center gap-2 hover:bg-white px-4 py-2 border-2 border-white rounded-xl w-full hover:text-zinc-700 text-xl text-center transition-all duration-200 ${isContact ? 'bg-white text-zinc-700 hover:scale-110' : ''}` target="_blank" rel="noreferrer noopener">
+  <slot/>
+</a>
